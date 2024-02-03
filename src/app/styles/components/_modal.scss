@@ -1,0 +1,134 @@
+@import "../mixins/common";
+
+.currency-select-modal {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  position: absolute;
+  background-color: var(--white);
+  top: 40px;
+  right: 0;
+  border-radius: 8px;
+  z-index: var(--modal-z-index);
+  box-shadow: var(--default-box-shadow);
+  height: 170px;
+  width: 285px;
+  // justify-content: space-between;
+
+  .modal-body {
+    display: flex;
+    .block {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      border-right: 1px solid var(--grey2);
+      gap: 16px;
+
+      &:last-child {
+        width: 40%;
+        border: none;
+        padding-left: 16px;
+      }
+
+      .heading {
+        font-size: 14px;
+        color: var(--brand-blue);
+        font-weight: 600;
+      }
+
+      .select-item {
+        display: flex;
+        padding-right: 8px;
+
+        .description {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          gap: 8px;
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    display: flex;
+    width: 100%;
+    margin-top: 16px;
+    justify-content: flex-end;
+  }
+
+  @media screen and (max-width: 992px) {
+    position: fixed;
+    @include modal_mid_position;
+
+    width: auto;
+    max-width: 500px;
+    height: auto;
+
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      gap: 16px;
+
+      .block {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: none;
+        gap: 8px;
+        padding-bottom: 16px;
+
+        &:first-child {
+          border-bottom: 1px solid var(--grey2);
+        }
+        &:last-child {
+          width: 100%;
+          padding: 0px;
+        }
+
+        .heading {
+          display: flex;
+          font-size: 14px;
+          color: var(--brand-blue);
+          font-weight: 600;
+        }
+
+        .select-item {
+          display: flex;
+          padding-right: 8px;
+
+          .description {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 8px;
+          }
+        }
+      }
+    }
+
+    .modal-footer {
+      .button-yellow {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.generic-modal {
+  display: flex;
+  position: fixed;
+  @include modal_mid_position;
+  height: 200px;
+  width: 50%;
+  padding: 16px;
+  z-index: var(--modal-z-index);
+  box-shadow: var(--default-box-shadow);
+  background-color: var(--white);
+
+  .modal-body {
+    display: flex;
+    width: 100%;
+  }
+}

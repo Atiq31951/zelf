@@ -1,0 +1,32 @@
+.input-box {
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  width: 235px;
+  position: relative;
+
+  .swaper {
+    position: absolute;
+    top: 50%;
+    right: -54px;
+    transform: translate(-60%, -50%);
+    z-index: var(--generic-z-index);
+  }
+
+  .text-1 {
+    font-size: 12px;
+  }
+
+  .text-2 {
+    font-weight: 600;
+  }
+}
+
+.select-inputbox {
+  display: flex;
+  // width: 100%;
+  padding: 16px;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+}
